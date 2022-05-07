@@ -1,0 +1,215 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+}
+body {
+  /*background-image: url("file:///C:/Users/super/repos/projunknownodi/media/dashboard-project.png");*/
+  background-size: cover;
+}
+.content {
+  width: 100vw;
+  height: 1000px;
+  display: flex;
+  align-items: stretch;
+}
+.left-sidebar {
+  color: aliceblue;
+  background-color: #629bf8;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+}
+
+.left-sidebar > * {
+  width: max-content;
+  margin: 10% 2em 20% 20px;
+}
+.left-sidebar svg {
+  margin-right: 2em;
+}
+.left-sidebar li {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.left-sidebar .dash-title {
+  font-size: x-large;
+}
+.left-sidebar .links {
+  font-size: larger;
+}
+.left-sidebar .options {
+  font-size: larger;
+}
+.user-content {
+  flex: 4;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  margin: 0px;
+}
+.user-content > .header {
+  height: 20%;
+  width: 100%;
+  padding: 4px 16px;
+  display: grid;
+  justify-content: stretch;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  z-index: 3;
+  position: relative;
+}
+
+.header > * > * {
+  margin-right: 1em;
+}
+.search-bar {
+  display: flex;
+  align-self: center;
+}
+.search-bar > input {
+  border-radius: 10px;
+  background-color: lightgrey;
+  flex: 0 0 auto;
+  width: max(200px, 65%);
+  border: none;
+}
+.search-bar > svg {
+  flex: 0 0 auto;
+}
+.header > .notifications {
+  height: 60%;
+  flex: 0 0 auto;
+  grid-column: 2/3;
+  display: flex;
+  justify-self: end;
+  align-self: end;
+}
+.header > .user-title {
+  display: flex;
+  font-size: x-large;
+  align-self: center;
+}
+.user-content > .user-display {
+  height: 0%;
+  flex: 6;
+  display: flex;
+  font-size: larger;
+  background-color: #efeff1;
+}
+.user-display > .activity {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 8px;
+  overflow: hidden;
+}
+
+/*
+.notifications .profile-img {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: 100% 100%;
+  background-image: url("../media/profilepic.png");
+  transform: translateY(-25%);
+  background-color: yellowgreen;
+}
+*/
+
+.announcement {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  font-size: small;
+  flex: 1;
+  padding: 2px 4px;
+  margin: 5px;
+}
+.announcement .title {
+  font-size: medium;
+  margin: 5px;
+}
+
+.trending {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-content: stretch;
+  background-color: white;
+  border-radius: 8px;
+}
+.trending-profile {
+  display: flex;
+  margin: 0.1em;
+}
+.profile-info {
+  flex: 1;
+  margin-left: 2em;
+  font-size: 0.5em;
+}
+.profile-info .title {
+  font-size: 1.5em;
+}
+
+.user-display > .card-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.card-container > .txt {
+  flex: 0, 0, auto;
+}
+
+.card-container > .card-grid {
+  height: 0%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.card {
+  height: 140px;
+  width: 250px;
+  background-color: white;
+  display: flex;
+  align-items: start;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 5px 5px 4px 1px rgb(0, 0, 0, 0.4);
+  word-wrap: break-word;
+}
+.card::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  flex-shrink: 0;
+  height: 100%;
+  background-color: orange;
+  border-radius: 12px 0px 0px 12px;
+  word-wrap: break-word;
+}
+.card > div {
+  width: 0%;
+  flex: 1;
+}
